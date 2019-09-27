@@ -6,8 +6,9 @@ public class MathEx {
     public static void main(String[] args) {
         //int y = swap(123);
         //System.out.println(y);
-        timeLeft(1, 19, 5, 48);
-        //dayOfWeek(0,1);
+        //timeLeft(1, 34, 8, 20);
+        int x = dayOfWeek(5, 4);
+        System.out.println(x);
     }
 /**
     public static int swap(int numSwitch) {
@@ -19,19 +20,27 @@ public class MathEx {
         return numSwitch;
 
     }
-**/
+
     public static void timeLeft(int curHour, int curMin, int depHour, int depMin){
-        curHour = depHour - curHour;
-        curMin = depMin - curMin;
-         if (curMin < 0){
-             curMin += 60;
-             curHour--;
-     }
-        System.out.println(curHour + " hours and " + curMin + " minutes");
-     }
+        int a;
+        int b;
+        int c;
+        int d;
+        int f;
+        int g;
+        a = curHour*60 + curMin;     // finds the number of minutes for current time
+        b = depHour*60 + depMin;     // finds the number of minutes for departure time
+        c = b - a;                   // finds the difference in minutes between times
+        d = c/60;                    // finds the hours between current and departure
+        f = c %60;
+        System.out.println(d + " hours and " + f + " minutes");
 
-     public static void dayOfWeek(int day, int date){
+     }
+**/
 
+     public static int dayOfWeek(int day, int date){
+        date = date + day -1;       // makes date equal to itself plus day-1 in order to make it the new day
+        return date % 7;            // there is 7 days in a week, so this makes it into sets of 7.
      }
 
 }
