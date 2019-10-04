@@ -6,9 +6,21 @@ public class MathEx {
     public static void main(String[] args) {
         int y = swap(123);
         System.out.println(y);
+        timeLeft(1, 15, 4, 36);
         timeLeft(1, 34, 8, 20);
-        int x = dayOfWeek(5, 4);
-        System.out.println(x);
+        int a = dayOfWeek(0, 1);
+        System.out.println(a);
+        int b = dayOfWeek(0, 14);
+        System.out.println(b);
+        int c = dayOfWeek(6, 22);
+        System.out.println(c);
+        int d = dayOfWeek(5, 4);
+        System.out.println(d)
+        int e = dayOfWeek(1, 24);
+        System.out.println(e);
+        int f = dayOfWeek(2, 1);
+        System.out.println(f);
+
     }
 
     public static int swap(int numSwitch) {
@@ -35,5 +47,15 @@ public class MathEx {
         date = date + day -1;       // makes date equal to itself plus day-1 in order to make it the new day
         return date % 7;            // there is 7 days in a week, so this makes it into sets of 7.
      }
-
-}
+/**
+outputs 
+Original Number: 123
+132
+3 hours and 21 minutes
+6 hours and 41 minutes
+0
+6
+6
+1
+3
+2
