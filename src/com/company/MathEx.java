@@ -15,7 +15,7 @@ public class MathEx {
         int c = dayOfWeek(6, 22);
         System.out.println(c);
         int d = dayOfWeek(5, 4);
-        System.out.println(d)
+        System.out.println(d);
         int e = dayOfWeek(1, 24);
         System.out.println(e);
         int f = dayOfWeek(2, 1);
@@ -25,28 +25,29 @@ public class MathEx {
 
     public static int swap(int numSwitch) {
         System.out.println("Original Number: " + numSwitch);
-        int a = (numSwitch/100) %10;                        //gets the 100th place
-        int b = (numSwitch /10) %10;                        //gets the 10th place
-        int c = numSwitch%10;                               //gets the 1's place
-        numSwitch = (a*100) + (c * 10) + (b);               //creates the switched number
+        int a = (numSwitch / 100) % 10;                        //gets the 100th place
+        int b = (numSwitch / 10) % 10;                        //gets the 10th place
+        int c = numSwitch % 10;                               //gets the 1's place
+        numSwitch = (a * 100) + (c * 10) + (b);               //creates the switched number
         return numSwitch;
 
     }
 
-    public static void timeLeft(int curHour, int curMin, int depHour, int depMin){
-        int a = curHour*60 + curMin;     // finds the number of minutes for current time
-        int b = depHour*60 + depMin;     // finds the number of minutes for departure time
+    public static void timeLeft(int curHour, int curMin, int depHour, int depMin) {
+        int a = curHour * 60 + curMin;     // finds the number of minutes for current time
+        int b = depHour * 60 + depMin;     // finds the number of minutes for departure time
         int c = b - a;                   // finds the difference in minutes between times
-        int d = c/60;                    // finds the hours between current and departure
-        int f = c %60;                   // finds the number of minutes, without hours factored in
+        int d = c / 60;                    // finds the hours between current and departure
+        int f = c % 60;                   // finds the number of minutes, without hours factored in
         System.out.println(d + " hours and " + f + " minutes");
 
-     }
+    }
 
-     public static int dayOfWeek(int day, int date){
-        date = date + day -1;       // makes date equal to itself plus day-1 in order to make it the new day
+    public static int dayOfWeek(int day, int date) {
+        date = date + day - 1;       // makes date equal to itself plus day-1 in order to make it the new day
         return date % 7;            // there is 7 days in a week, so this makes it into sets of 7.
-     }
+    }
+}
 /**
 outputs 
 Original Number: 123
@@ -59,3 +60,4 @@ Original Number: 123
 1
 3
 2
+**/
